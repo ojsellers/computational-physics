@@ -310,8 +310,7 @@ def plotting(xstart,xend,xincre,xlabel,ystart,yend,yincre,ylabel,grad1,grad2,con
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)
         plt.show()
-        
-#get rid of this fn for program    
+            
 def runemptybox():
 
     v,N = initialiseemptybox()
@@ -334,8 +333,7 @@ def runemptybox():
     plt.ylabel("Error")
     plt.legend()
     plt.show()
-    
-#get rid of this fn for program 
+     
 def runcapacitor():  
     
     print("Testing Gauss-Siedel solver:")
@@ -362,8 +360,7 @@ def runcapacitor():
     
     plotting(0,boxlength,incre,'X position (m)',0,boxlength,incre,'Y position (m)',grad1,grad2,field_mag,
              platestart,platefinish,plate1height,plate2height,incre,physics = 'capacitor',plot_type = 'stream')
-
-#get rid of this for program    
+    
 def runpoker():
     print("Testing diffusion solver:")
     testevolvetemperature(10,1e-8)
@@ -374,6 +371,6 @@ def runpoker():
     plotting(0,pokerlength,incre,'Length along poker (m)',0,iterations*timestep,timestep,'Time (s)',0,0,pokerplot,
                  0,0,0,0,0,'poker',plot_type = 'contour')
  
-#runemptybox()
-#runcapacitor()
+runemptybox()
+runcapacitor()
 runpoker()
